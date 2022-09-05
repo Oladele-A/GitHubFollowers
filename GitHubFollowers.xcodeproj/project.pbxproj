@@ -25,6 +25,7 @@
 		2232732228A04C6100BFB671 /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2232732128A04C6100BFB671 /* FollowerListViewController.swift */; };
 		2234AC6628B6950C001CA2DA /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2234AC6528B6950C001CA2DA /* GFSecondaryTitleLabel.swift */; };
 		2234AC6828B69654001CA2DA /* GFUserInfoHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2234AC6728B69654001CA2DA /* GFUserInfoHeaderViewController.swift */; };
+		223BC99528C670AD008DC221 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223BC99428C670AD008DC221 /* FavoriteCell.swift */; };
 		223FFAF52854B7A2001D0123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FFAF42854B7A2001D0123 /* AppDelegate.swift */; };
 		223FFAF72854B7A2001D0123 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FFAF62854B7A2001D0123 /* SceneDelegate.swift */; };
 		223FFAFE2854B7A7001D0123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223FFAFD2854B7A7001D0123 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		2232732128A04C6100BFB671 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
 		2234AC6528B6950C001CA2DA /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		2234AC6728B69654001CA2DA /* GFUserInfoHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderViewController.swift; sourceTree = "<group>"; };
+		223BC99428C670AD008DC221 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		223FFAF12854B7A2001D0123 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223FFAF42854B7A2001D0123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223FFAF62854B7A2001D0123 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				224309B528A3B63200D74A83 /* FollowerCell.swift */,
+				223BC99428C670AD008DC221 /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				2234AC6628B6950C001CA2DA /* GFSecondaryTitleLabel.swift in Sources */,
 				2232731E289FF8C800BFB671 /* GFButton.swift in Sources */,
 				22FF102728BA0BE2006AB2EC /* GFItemInfoView.swift in Sources */,
+				223BC99528C670AD008DC221 /* FavoriteCell.swift in Sources */,
 				22675F1928B426A900E1FCCC /* GFError.swift in Sources */,
 				2232732228A04C6100BFB671 /* FollowerListViewController.swift in Sources */,
 				224309B628A3B63200D74A83 /* FollowerCell.swift in Sources */,
