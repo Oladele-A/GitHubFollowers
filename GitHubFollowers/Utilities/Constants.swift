@@ -5,7 +5,7 @@
 //  Created by Oladele Abimbola on 8/25/22.
 //
 
-import Foundation
+import UIKit
 
 enum SFSymbols{
     static let location = "mappin.and.ellipse"

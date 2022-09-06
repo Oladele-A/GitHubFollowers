@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = createTabBar()
+        window?.rootViewController = GFTabBarController()
         window?.makeKeyAndVisible()
         
         configureNavigationBar()
@@ -28,30 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     /*
     navigation bars and tab bars in iOS 15 are transparent by default and they will automatically have same color with the views background color. This may cause visual issues in the app. We can correct this by updating the appearance of both the navigationBar and tabBar. Check the app delegate class for the code on how this is done.
      */
-    
-    func createSearchNC() -> UINavigationController{
-        let searchVC = SearchViewController()
-        searchVC.title = "Search"
-        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        let searchNC = UINavigationController(rootViewController: searchVC)
-        return searchNC
-    }
-
-    func createFavoritesNC() ->UINavigationController{
-        let favoritesVC = FavoriteListViewController()
-        favoritesVC.title = "Favorites"
-        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        let favoritesNC = UINavigationController(rootViewController: favoritesVC)
-        return favoritesNC
-    }
-
-    func createTabBar() -> UITabBarController{
-        let tabBar = UITabBarController()
-        UITabBar.appearance().tintColor = .systemGreen
-        tabBar.viewControllers = [createSearchNC(), createFavoritesNC()]
-        
-        return tabBar
-    }
     
     func configureNavigationBar(){
         UINavigationBar.appearance().tintColor = .systemGreen
