@@ -77,6 +77,7 @@ class FollowerListViewController: GFDataLoadingVC {
         searchController.searchBar.placeholder = "Search for a username"
 //        searchController.obscuresBackgroundDuringPresentation = true
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     
