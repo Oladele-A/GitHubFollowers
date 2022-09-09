@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoriteListViewController: UIViewController {
+class FavoriteListViewController: GFDataLoadingVC {
     
     let tableView = UITableView()
     var favorites: [Follower] = []
