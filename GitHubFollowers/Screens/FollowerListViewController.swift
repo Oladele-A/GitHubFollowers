@@ -201,8 +201,8 @@ extension FollowerListViewController: FollowerListVCDelegate{
         self.username = username
         title = username
         page = 1
-        // collectionView.setContentOffset(.zero, animated: true)
-        collectionView.setContentOffset(.init(x: 0, y: -200), animated: true)
+        //collectionView.setContentOffset(.init(x: 0, y: -200), animated: true)
+        collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
         follower.removeAll()
         filteredFollower.removeAll()
         getFollowers(username: username, page: page)
