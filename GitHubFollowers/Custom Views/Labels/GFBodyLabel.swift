@@ -25,7 +25,8 @@ class GFBodyLabel: UILabel {
     
     private func configure(){
         textColor = .secondaryLabel
-        font = UIFont.preferredFont(forTextStyle: .body)
+        font = UIFont.preferredFont(forTextStyle: .body) // This line and the next help to conform to dynamic text type
+        adjustsFontForContentSizeCategory = true
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.75
         lineBreakMode = .byWordWrapping

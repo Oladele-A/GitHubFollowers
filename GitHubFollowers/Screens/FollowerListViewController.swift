@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol FollowerListVCDelegate: AnyObject{
-    func didRequestFollower(for username: String)
-}
+
 
 class FollowerListViewController: GFDataLoadingVC {
     
@@ -196,7 +194,8 @@ extension FollowerListViewController: UISearchResultsUpdating{
     }
 }
 
-extension FollowerListViewController: FollowerListVCDelegate{
+extension FollowerListViewController: UserInfoVCDelegate
+{
     
     func didRequestFollower(for username: String) {
         // reset the page and make the network call again

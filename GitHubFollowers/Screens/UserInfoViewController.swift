@@ -7,9 +7,8 @@
 
 import UIKit
 
-protocol UserInfoVCDelegate: AnyObject {
-    func didTapGithubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
+protocol UserInfoVCDelegate: AnyObject{
+    func didRequestFollower(for username: String)
 }
 
 class UserInfoViewController: GFDataLoadingVC {
@@ -22,7 +21,7 @@ class UserInfoViewController: GFDataLoadingVC {
     var itemViews: [UIView] = []
     
     var username: String!
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +80,7 @@ class UserInfoViewController: GFDataLoadingVC {
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180),
+            headerView.heightAnchor.constraint(equalToConstant: 210),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 20),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
@@ -90,7 +89,7 @@ class UserInfoViewController: GFDataLoadingVC {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
             
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
+            dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -106,7 +105,7 @@ class UserInfoViewController: GFDataLoadingVC {
     }
 }
 
-extension UserInfoViewController: UserInfoVCDelegate{
+extension UserInfoViewController: ItemInfoVCDelegate{
     func didTapGithubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else{
             presentAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")

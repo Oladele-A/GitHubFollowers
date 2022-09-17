@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ItemInfoVCDelegate: AnyObject {
+    func didTapGithubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
+}
+
 // Super Class of the two itemViews that will be added to the user info screen
 class GFItemInfoViewController: UIViewController {
     
@@ -16,7 +21,7 @@ class GFItemInfoViewController: UIViewController {
     let actionButton = GFButton()
     
     var user: User!
-    weak var delegate: UserInfoVCDelegate!
+    weak var delegate: ItemInfoVCDelegate!
     
     init(user:User){
         super.init(nibName: nil, bundle: nil)
